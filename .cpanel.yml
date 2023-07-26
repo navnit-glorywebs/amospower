@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home2/gloryweb/public_html/html/github
+    - /bin/cp * $DEPLOYPATH
