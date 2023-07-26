@@ -1,0 +1,392 @@
+/*---------------------------  
+	Common
+---------------------------*/
+html {scroll-behavior: smooth; }
+body {padding: 0px; margin: 0px; font-family: 'Exo', sans-serif; overflow-x: hidden; }
+img {max-width: 100%; }
+a { display: inline-block; }
+a:hover, a:focus, button:hover, button:focus {outline: none; text-decoration: none; }
+p { margin: 0px; }
+h1, h2, h3, h4, h5, h6, figure, ul { margin: 0; padding: 0px; }
+ul li {list-style: none; }
+
+span.help-block {
+    display: none !important;
+}
+.form-control.help-block {
+	border-color: red !important;
+}
+
+/*---------------------------  
+	Header
+---------------------------*/
+.site-header {padding: 30px 0; z-index: 99; background: #fff; position: relative; transition: all .4s ease-in-out;}
+.site-header.sticky {padding: 15px 0; position: fixed; width: 100%; top: 0; box-shadow: 0 0 20px rgb(0 0 0 / 5%); }
+.site-header .site-navigation ul {position: relative; top: auto; left: auto; width: 100%; max-width: 100%; height: auto; padding: 0; background: transparent; }
+.site-header .site-navigation ul li {margin: 0 12px; }
+.site-header .site-navigation ul li a {font-family: 'Play', sans-serif; display: block; padding: 15px 0; font-size: 15px; font-weight: 700; line-height: 1; color: #565656; text-transform: uppercase; text-decoration: none; position: relative; transition: all .4s ease-in-out; }
+.site-header .site-navigation ul li a:hover {color: #38BCC2; }
+.site-header .site-navigation ul li a:after {background: none repeat scroll 0 0 transparent; bottom: 0; content: ""; display: block; height: 4px; left: 50%; position: absolute; background: #38BCC2; transition: width 0.3s ease 0s, left 0.3s ease 0s; width: 0; }
+.site-header .site-navigation ul li a:hover:after {width: 100%; left: 0; }
+.site-header .site-navigation ul li .contact-btn:hover:after {content: none; }
+.site-header .site-navigation ul li .contact-btn {background: #38BCC2; padding: 15px 25px; border-radius: 5px; color: #fff; text-transform: capitalize; box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16); transition: all .4s ease-in-out; }
+.site-header .site-navigation ul li .contact-btn:hover {color: #fff; background: #558BD1; }
+.site-header .hamburger-menu {position: relative; width: 24px; height: 22px; transition: .5s ease-in-out; cursor: pointer; }
+.site-header .hamburger-menu span:nth-child(1) {top: 2px; }
+.site-header .hamburger-menu span:nth-child(2), .site-header .hamburger-menu span:nth-child(3) {top: 10px; }
+.site-header .hamburger-menu span:nth-child(4) {top: 18px; }
+.site-header .hamburger-menu span {display: block; position: absolute; height: 2px; width: 100%; background: #363637; border-radius: 10px; opacity: 1; left: 0; transition: .25s ease-in-out; }
+.site-header .hamburger-menu.open span:nth-child(1) {top: 18px; width: 0; left: 50%; }
+.site-header .hamburger-menu.open span:nth-child(2) {transform: rotate(45deg); }
+.site-header .hamburger-menu.open span:nth-child(3) {transform: rotate(-45deg); }
+.site-header .hamburger-menu.open span:nth-child(4) {top: 18px; width: 0; left: 50%; }
+
+
+/*---------------------------  
+	Banner
+---------------------------*/
+.banner-section { padding: 50px 0 90px; }
+.banner-section .left-content h1 {font-size: 44px; font-weight: 800; line-height: 60px; color: #333333; letter-spacing: 0; margin-bottom: 13px; text-transform: uppercase; }
+.banner-section .left-content h1 span {color: #38BCC2; }
+.banner-section .left-content p {font-family: 'Play', sans-serif; font-size: 21px; font-weight: 400; line-height: 33px; color: #4B4B4B; letter-spacing: 0; margin-bottom: 25px; }
+.banner-section .left-content .sign-up-form {padding-right: 15px; }
+.banner-section .left-content .sign-up-form .form-control {border: 1px solid #B3B3B3; height: 65px; padding: 10px 20px; background: #F3F3F3; font-size: 18px; font-family: 'Play', sans-serif; transition: all .4s ease-in-out; box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);}
+.banner-section .left-content .sign-up-form .form-control:hover, .banner-section .left-content .sign-up-form .form-control:focus {outline: none !important; box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16); border-color: #558bd1; }
+.banner-section .left-content .sign-up-form .input-group-append {position: relative; left: -10px; z-index: 9 }
+.banner-section .left-content .sign-up-form .input-group-append button {background: #558BD1; padding: 15px 27px; font-family: 'Play', sans-serif; font-size: 16px; font-weight: 700; border-radius: 5px !important; color: #fff; text-transform: capitalize; box-shadow: 0px 3px 6px rgb(0 0 0 / 16%); transition: all .4s ease-in-out; border-color: #558BD1; border: 0;}
+.banner-section .left-content .sign-up-form .input-group-append button:hover, .banner-section .left-content .sign-up-form .input-group-append button:focus {background: #38BCC2; border-color: #38BCC2; }
+.banner-section .left-content .sign-up-form .input-group-append .signupbtn {background: #558BD1; padding: 15px 27px; font-family: 'Play', sans-serif; font-size: 16px; font-weight: 700; border-radius: 5px !important; color: #fff; text-transform: capitalize; box-shadow: 0px 3px 6px rgb(0 0 0 / 16%); transition: all .4s ease-in-out; border-color: #558BD1; border: 0;}
+.banner-section .left-content .sign-up-form .input-group-append .signupbtn:hover, .banner-section .left-content .sign-up-form .input-group-append button:focus {background: #38BCC2; border-color: #38BCC2; }
+.banner-section .right-content .video-section {display: inline-block; position: relative; }
+.banner-section .right-content .video-section:before {content: ""; background: url(../images/shadow.png) no-repeat; position: absolute; bottom: -40px; width: 100%; background-size: cover; background-position: center; height: 40px; }
+.banner-section .right-content .video-section:after {content: "\f04b"; font-family: Fontawesome; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(0,0,0,0.71); height: 61px; width: 108px; display: flex; justify-content: center; align-items: center; font-size: 25px; color: #fff; animation: pulse-animation 1.5s infinite; }
+@keyframes pulse-animation {
+  0% {
+    box-shadow: 0 0 0 0px rgba(0,0,0,0.5);
+  }
+  100% {
+    box-shadow: 0 0 0 20px rgba(0,0,0,0);
+  }
+}
+
+
+/*---------------------------  
+	Solution
+---------------------------*/
+.solution-section {padding: 80px 0; background: #38BCC2; }
+.solution-section .left-content {max-width: 545px; }
+.solution-section .left-content .solution-box .owl-dots {position: absolute; bottom: 5px; right: 50px; margin-top: 0 !important; }
+.solution-section .left-content .solution-box .owl-dots .owl-dot span {width: 21px; height: 6px; border-radius: 0; margin: 5px 0px; margin-right: 4px; background: rgba(255,255,255,0.26); }
+.solution-section .left-content .solution-box .owl-dots .owl-dot.active span, .solution-section .left-content .solution-box .owl-dots .owl-dot:hover span {background: #ffffff; }
+.solution-section .right-content {max-width: 510px; margin: auto; }
+.solution-section .right-content h2 {font-size: 36px; font-weight: 700; line-height: 50px; color: #ffffff; letter-spacing: 0; margin-bottom: 18px; text-transform: uppercase; }
+.solution-section .right-content p {font-family: 'Play', sans-serif; font-size: 33px; font-weight: 400; line-height: 46px; color: #ffffff; letter-spacing: 0; margin-bottom: 0px; }
+.solution-box:after {content: ""; position: absolute; background: url(../images/slider-border.png) no-repeat; width: 540px; height: 540px; top: 27px; left: -8px; }
+
+
+/*---------------------------  
+	Amospower
+---------------------------*/
+.amospower-section {position: relative; padding: 188px 0 155px; }
+.amospower-section .container {position: relative; }
+.amospower-section .container:before {content: ""; position: absolute; background: url(../images/amospowerbg.png) no-repeat; top: -100px; right: -520px; width: 1089px; height: 800px; }
+.amospower-section .left-content {max-width: 520px; }
+.amospower-section .left-content h2 {font-size: 36px; font-weight: 800; line-height: 46px; color: #333333; letter-spacing: 0; margin-bottom: 18px; text-transform: uppercase; }
+.amospower-section .left-content p {font-family: 'Play', sans-serif; font-size: 33px; font-weight: 400; line-height: 56px; color: #333333; letter-spacing: 0; margin-bottom: 0px; }
+
+/*---------------------------  
+	Market
+---------------------------*/
+.market-section {background: #1C1C1C; padding: 110px 0 55px; }
+.market-section .right-content {padding-left: 25px; }
+.market-section .right-content h2 {font-size: 35px; font-weight: 800; line-height: 55px; color: #FFFEFB; letter-spacing: 0; margin-bottom: 20px; text-transform: uppercase; }
+.market-section .right-content p {font-family: 'Play', sans-serif; font-size: 36px; font-weight: 400; line-height: 55px; color: #FFFEFB; letter-spacing: 0; margin-bottom: 18px; }
+.market-section .right-content p strong {color: #D9D29F; }
+.market-section .right-content h3 {font-family: 'Play', sans-serif; font-size: 19px; font-weight: 400; line-height: 55px; color: #FFFEFB; letter-spacing: 0; margin-bottom: 0px; }
+
+/*---------------------------  
+	Technology
+---------------------------*/
+.technology-section {padding: 70px 0 45px; }
+.technology-section .heading-row .left-content h2 {font-size: 35px; font-weight: 800; line-height: 1; color: #333333; letter-spacing: 0; margin-bottom: 8px; text-transform: uppercase; }
+.technology-section .heading-row .left-content p {font-family: 'Play', sans-serif; font-size: 30px; font-weight: 400; line-height: 38px; color: #565656; letter-spacing: 0; margin-bottom: 0px; }
+.technology-section .heading-row .right-content p {font-family: 'Play', sans-serif; font-size: 12px; font-weight: 400; line-height: 16px; color: #C5C5C5; letter-spacing: 0; margin-bottom: 0px; }
+.technology-section .heading-row .img-box { margin-top: 50px; }
+.technology-section .content-row {margin-top: -67px; }
+.technology-section .content-row .technology-box {padding-left: 20px; margin-bottom: 30px; }
+.technology-section .content-row .technology-box img {margin-bottom: 18px; }
+.technology-section .content-row .technology-box h2 {font-size: 34px; font-weight: 700; line-height: 45px; color: #2B2C2D; letter-spacing: 0; margin-bottom: 18px; }
+.technology-section .content-row .technology-box p {font-family: 'Play', sans-serif; font-size: 18px; font-weight: 400; line-height: 33px; color: #333333; letter-spacing: 0; }
+
+/*---------------------------  
+	Autonomous
+---------------------------*/
+.autonomous-section {padding: 75px 0; background: url(../images/background.png) no-repeat; background-size: cover; }
+.autonomous-section .heading-row h2 {font-size: 42px; font-weight: 800; line-height: 60px; color: #333333; margin-bottom: 0px; }
+.autonomous-section .slider-row {margin-top: 45px; }
+.autonomous-section .slider-row .autonomous-points li {font-family: 'Play', sans-serif; font-size: 30px; font-weight: 400; line-height: 35px; color: #434242; padding-bottom: 35px; padding-left: 40px; position: relative; }
+.autonomous-section .slider-row .autonomous-points li:last-child {padding-bottom: 0px; }
+.autonomous-section .slider-row .autonomous-points li:after {content: ""; position: absolute; left: 6px; background: #434242; height: 12px; width: 13px; top: 11px; }
+.autonomous-section .slider-row .autonomous-box .owl-dots {position: absolute; bottom: 25px; left: 45px; margin-top: 0 !important; }
+.autonomous-section .slider-row .autonomous-box .owl-dots .owl-dot span {width: 22px; height: 6px; border-radius: 0; margin: 5px 0px; margin-right: 4px; background: rgba(255,255,255,0.5); }
+.autonomous-section .slider-row .autonomous-box .owl-dots .owl-dot.active span, .autonomous-section .slider-row .autonomous-box .owl-dots .owl-dot:hover span {background: #ffffff; }
+
+/*---------------------------  
+	The Plan
+---------------------------*/
+.theplan-section {padding: 85px 0 145px; background: #1A1A1A; }
+.theplan-section .heading-row h2 {font-size: 42px; font-weight: 800; line-height: 60px; color: #ffffff; padding-bottom: 35px; margin-bottom: 50px; text-transform: uppercase; border-bottom: 1px solid #565656; }
+.theplan-section .innerrow .content-box {padding-left: 60px; padding-right: 35px; }
+.theplan-section .innerrow .content-box h2 {font-size: 42px; font-weight: 800; line-height: 60px; color: #ffffff; margin-bottom: 10px; text-transform: uppercase;}
+.theplan-section .innerrow .content-box p {font-family: 'Play', sans-serif; font-size: 20px; font-weight: 400; line-height: 33px; color: #ffffff; margin-bottom: 15px;}
+.theplan-section .innerrow .images-box{ position: relative; }
+.theplan-section .innerrow .images-box {position: absolute; top: 40px; width: 1170px; left: -180px; }
+.theplan-section .innerrow-two {padding-top: 120px; }
+.theplan-section .innerrow-two .content-box {padding-left: 60px; padding-right: 15px; }
+.theplan-section .innerrow-two .content-box h2 {font-size: 42px; font-weight: 800; line-height: 60px; color: #ffffff; margin-bottom: 10px; text-transform: uppercase;}
+.theplan-section .innerrow-two .content-box p {font-family: 'Play', sans-serif; font-size: 20px; font-weight: 400; line-height: 33px; color: #ffffff; margin-bottom: 15px;}
+.theplan-section .innerrow-two .images-box{ position: relative; }
+.theplan-section .innerrow-two .images-box {position: absolute; top: -120px; width: 801px; left: -105px; }
+
+/*---------------------------  
+	Team
+---------------------------*/
+.team-section {padding: 80px 0 60px; }
+.team-section .header-row h2 {font-size: 42px; font-weight: 800; line-height: 49px; color: #333333; margin-bottom: 0; text-transform: uppercase; }
+.team-section .header-row p {font-family: 'Play', sans-serif; font-size: 28px; font-weight: 400; line-height: 50px; color: #565656; margin-bottom: 45px; text-transform: uppercase; }
+.team-section .team-row [class*="col-"] {border: 1px solid rgba(112,112,112,0.5); padding: 35px 50px 35px 50px; }
+.team-section .team-row .memberone {border-left: 0 !important; border-right: 0 !important; }
+.team-section .team-row .memberthree {border-left: 0 !important; border-right: 0 !important; }
+.team-section .team-row .memberfour {border-top: 0 !important; border-right: 0 !important; border-left: 0 !important; }
+.team-section .team-row .memberfive {border-top: 0 !important; }
+.team-section .team-row .membersix {border-top: 0 !important; border-right: 0 !important; border-left: 0 !important; }
+.team-section .team-row .team-box img { margin-bottom: 23px; }
+.team-section .team-row .team-box h2 {font-size: 24px; font-weight: 800; line-height: 30px; color: #333333; margin-bottom: 3px; text-transform: uppercase; }
+.team-section .team-row .team-box h3 {font-family: 'Play', sans-serif; font-size: 21px; font-weight: 400; line-height: 30px; color: #999999; margin-bottom: 10px; }
+.team-section .team-row .team-box p {font-family: 'Play', sans-serif; font-size: 16px; font-weight: 400; line-height: 28px; color: #333333; margin-bottom: 0; }
+.team-section .button-row {margin-top: 50px; }
+.team-section .button-row button {font-family: 'Play', sans-serif; font-size: 26px; font-weight: 700; height: 78px; color: #fff; background: #558BD1; border: 0; border-radius: 5px; width: 100%; max-width: 415px; padding: 15px; transition: all .4s ease-in-out; }
+.team-section .button-row button img {padding-left: 20px; }
+.team-section .button-row button:hover, .button-row button:focus {background: #38BCC2; }
+
+/*---------------------------  
+	Footer
+---------------------------*/
+.footer-section {background: #333333; padding: 21px 0 0px; }
+.footer-section .menu-row {border-bottom: 1px solid #272727; padding-bottom: 20px; }
+.footer-section .menu-row .site-navigation ul li {margin: 0 12px; }
+.footer-section .menu-row .site-navigation ul li a {font-family: 'Play', sans-serif; display: block; padding: 11px 0; font-size: 15px; font-weight: 400; line-height: 1; color: #FFFFFF; text-transform: uppercase; text-decoration: none; position: relative; transition: all .4s ease-in-out; }
+.footer-section .menu-row .site-navigation ul li a:hover, .footer-section .site-navigation ul li a:focus {color: #38BCC2; }
+.footer-section .menu-row .site-navigation ul li a.contact-btn {padding: 10px 12px !important; border: 1px solid #707070; border-radius: 5px; }
+.footer-section .menu-row .site-navigation ul li a.contact-btn:hover, .footer-section .site-navigation ul li a.contact-btn:focus {color: #FFFFFF; border: 1px solid #38BCC2; background: #38BCC2; }
+.footer-section .copyright-row p {font-family: 'Play', sans-serif; font-size: 16px; font-weight: 400; color: #848484; padding: 10px 0 15px; }
+
+/*---------------------------  
+	Video Model
+---------------------------*/
+#videomodel .modal-dialog {max-width: 750px; margin: 1.75rem auto; }
+#videomodel .modal-body { padding: 6px; padding-bottom: 0; }
+#videomodel .modal-dialog .close {position: absolute; margin-bottom: 15px; right: -1px; top: 0px; background: transparent; opacity: 1; width: 35px; height: 35px; border-radius: 50%; }
+
+/*---------------------------  
+	Get In Touch Model
+---------------------------*/
+#GetInTouch .modal-dialog {max-width: 743px; }
+#GetInTouch .modal-header {padding: 0; }
+#GetInTouch .modal-header .close {position: absolute; margin-bottom: 15px; right: -1px; top: 0px; background: transparent; opacity: 1; width: 32px; height: 30px; border-radius: 50%; padding: 0; margin: 0; }
+#GetInTouch .modal-body {width: 100%; max-width: 581px; margin-top: -110px; background: #fff; margin-left: auto; margin-right: auto; padding: 45px 45px 30px; }
+#GetInTouch .modal-body h2 {font-size: 22px; font-weight: 700; line-height: 1; color: #333333; letter-spacing: 0; margin-bottom: 10px; text-transform: uppercase; }
+#GetInTouch .modal-body p {font-family: 'Play', sans-serif; font-size: 12px; font-weight: 400; line-height: 1; color: #333333; letter-spacing: 0; margin-bottom: 50px; }
+#GetInTouch .modal-body .form-group label {font-family: 'Play', sans-serif; font-size: 12px; font-weight: 700; line-height: 26px; color: #333333; margin-bottom: 0; }
+#GetInTouch .modal-body .form-group .form-control {border: 1px solid #DCDCDC; background: #E5E5E5; min-height: 42px; padding: 6px 15px; }
+#GetInTouch .modal-body .form-group .form-control:hover, #GetInTouch .modal-body .form-group .form-control:focus {outline: none; box-shadow: none; border-color: #38BCC2; background: #E5E5E5; }
+#GetInTouch .modal-body .form-group.subbtn {margin-bottom: 0rem; }
+#GetInTouch .modal-body .form-group.subbtn .submitnow {height: 42px; width: 155px; background: #171717; color: #fff; border: 0; border-radius: 5px; font-size: 15px; font-weight: 700; text-transform: uppercase; margin-top: 10px; }
+#GetInTouch .modal-body .form-group.subbtn .submitnow:hover, #GetInTouch .modal-body .form-group.subbtn .submitnow:focus {background: #38BCC2; }
+
+/*---------------------------  
+	Thank You Page
+---------------------------*/
+#thank-section {padding: 100px 0; }
+#thank-section .banner-content i.fa {font-size: 130px; color: #38bcc2; margin-bottom: 35px; }
+#thank-section .banner-content h1 {font-size: 60px; font-weight: 700; line-height: 1.09; margin-bottom: 13px; }
+#thank-section .banner-content p.sub {font-family: 'Play', sans-serif; margin-bottom: 35px; font-size: 22px; color: #565656; }
+#thank-section .banner-content a {background: #38BCC2; padding: 15px 25px; border-radius: 5px; color: #fff; text-transform: capitalize; box-shadow: 0px 3px 6px rgb(0 0 0 / 16%); transition: all .4s ease-in-out; }
+
+
+/*---------------------------  
+	Media
+---------------------------*/
+@media (min-width: 1200px) {
+	.container {max-width: 1200px; }
+}
+@media (max-width: 1199px) {
+	/*------ Header ------*/
+	.site-branding img { max-width: 130px; }
+	.site-header .site-navigation ul li a { font-size: 14px; }
+	.site-header .site-navigation ul li {margin: 0 10px; }
+	/*------ Banner ------*/
+	.banner-section .left-content h1 { font-size: 36px; line-height: 50px; }
+	.banner-section .left-content p { font-size: 20px; line-height: 30px;}
+	/*------ Solution ------*/
+	.solution-section .right-content h2 { font-size: 32px; line-height: 45px; }
+	.solution-section .right-content p { font-size: 30px; line-height: 45px; }
+	.solution-box:after {content: ""; position: absolute; background: url(../images/slider-border.png) no-repeat; background-size: contain; width: 470px; height: 380px; top: 27px; left: unset; right: 15px; }
+	/*------ Amospower ------*/
+	.amospower-section { padding: 130px 0 130px; }
+	.amospower-section .container:before { right: -620px; }
+	.amospower-section .left-content p { font-size: 31px; line-height: 50px; }
+	/*------ Market ------*/
+	.market-section { padding: 80px 0 55px; }
+	.market-section .right-content h2 { font-size: 32px; line-height: 45px; }
+	.market-section .right-content p { font-size: 30px; line-height: 45px; }
+	/*------ Autonomous ------*/
+	.autonomous-section .heading-row h2 { font-size: 38px; line-height: 50px; }
+	.autonomous-section .slider-row .autonomous-points li { font-size: 27px; }
+	/*------ The Plan ------*/
+	.theplan-section .innerrow-two .images-box {position: absolute; top: -120px; width: 801px; left: -220px; }
+	.theplan-section .innerrow .content-box { padding-left: 0px; padding-right: 0px; }
+	.theplan-section .innerrow-two .content-box { padding-right: 0px; }
+	/*------ Team ------*/
+	.team-section .team-row [class*="col-"] { padding: 35px; }
+	.team-section .team-row .membertwo {border-right: 0 !important; }
+	.team-section .team-row .memberthree {border-top: 0 !important; }
+	.team-section .team-row .memberfour {border-left: 1px solid rgba(112,112,112,0.5) !important; }
+	.team-section .team-row .memberfive {border-left: 0 !important; border-right: 0 !important; }
+	.team-section .team-row .membersix { border-left: 1px solid rgba(112,112,112,0.5) !important; }
+}
+@media (max-width: 991px) {
+	.second {order: 2; }
+	.first {order: 1; }
+	/*------ Header ------*/
+	.site-header { padding: 15px 0;}
+	.site-header .site-navigation ul {position: fixed; top: 0; left: -320px; z-index: 9999; width: 320px; max-width: calc(100% - 120px); height: 100%; padding: 30px 15px; margin: 0; background: rgb(52, 53, 57); list-style: none; overflow-x: scroll; transition: all 0.35s; }
+	.site-header .site-navigation ul li a {color: #fff; font-size: 15px; }
+	.site-header .site-navigation ul li .contact-btn {margin: 15px 0px; text-align: center;}
+	.site-header .site-navigation.show ul {left: 0; }
+	/*------ Banner ------*/
+	.banner-section .left-content { text-align: center; margin-bottom: 50px; }
+	.banner-section .right-content { max-width: 570px; margin: auto; }
+	.banner-section .left-content .sign-up-form { padding-right: 0; }
+	/*------ Solution ------*/
+	.solution-section .right-content {max-width: 100%; text-align: center; margin-bottom: 50px; }
+	.solution-section .left-content {max-width: 545px; margin: auto; }
+	.solution-box {position: relative; }
+	.solution-box::after {width: 100%; height: 100%; top: 27px; left: unset; right: 25px; }
+	/*------ Amospower ------*/
+	.amospower-section {padding: 90px 0 90px; }
+	.img-box {display: block !important; text-align: center !important; }
+	.amospower-section .left-content { max-width: 100%; text-align: center; }
+	.amospower-section .container:before { content: none; }
+	/*------ Technology ------*/
+	.technology-section .content-row .technology-box h2 { font-size: 27px; line-height: 34px; }
+	/*------ Autonomous ------*/
+	.autonomous-section .heading-row h2 { font-size: 34px; line-height: 48px; text-align: center;}
+	.autonomous-section .slider-row .autonomous-points li:last-child { padding-bottom: 35px; }
+	/*------ The Plan ------*/
+	.theplan-section { padding: 70px 0 85px; }
+	.theplan-section .heading-row h2 { text-align: center; }
+	.theplan-section .innerrow .content-box { text-align: center; margin-bottom: 50px;}
+	.theplan-section .innerrow .images-box { text-align: center; position: unset; width: 100%;}
+	.theplan-section .innerrow-two {padding-top: 0; text-align: center; }
+	.theplan-section .innerrow-two .content-box {padding-right: 0px; padding: 0; }
+	.theplan-section .innerrow-two .images-box { text-align: center; position: unset; width: 100%;}
+	/*------ Footer ------*/
+	.footer-section .menu-row [class*="col-"] { justify-content: center !important; }
+	.footer-section .menu-row .site-branding img { margin-top: 10px; margin-bottom: 20px; }
+	.footer-section .menu-row .site-navigation ul li { margin: 0 6px; }
+	.footer-section .copyright-row p { text-align: center; }
+	.footer-section { padding: 20px 0 15px; }
+}
+@media (max-width: 767px) {
+	/*------ Market ------*/
+	.market-section .right-content { padding-left: 0; margin-top: 50px; text-align:center;  }
+	/*------ Technology ------*/
+	.technology-section .heading-row {text-align: center; }
+	.technology-section .heading-row .left-content p { margin-bottom: 25px; }
+	.technology-section .heading-row .img-box { margin-top: 30px; margin-bottom: 30px; }
+	.technology-section .content-row { margin-top: 0px; }
+	.technology-section .content-row .technology-box { text-align: center; padding-left: 0px;}
+	.technology-section .content-row .technology-box h2 br { display: none; }
+	/*------ Team ------*/
+	.team-section .team-row [class*="col-"] {padding: 20px; }
+	/*------ Footer ------*/
+	.footer-section .menu-row [class*="col-"] {justify-content: center !important; }
+	.footer-section .menu-row .site-navigation ul {display: block !important; text-align: center; width: 190px; }
+	.footer-section .menu-row .site-navigation {width: 100%; justify-content: center !important; }
+	.footer-section .menu-row .site-branding img {margin-top: 10px; margin-bottom: 10px; }
+}
+@media (max-width: 575px) {
+	/*------ Banner ------*/
+	.banner-section { padding: 50px 0 70px; }
+	.banner-section .left-content h1 {font-size: 30px; line-height: 40px; }
+	/*------ Solution ------*/
+	.solution-section {padding: 50px 0; }
+	.solution-section .right-content h2 {font-size: 30px; line-height: 40px; }
+	.solution-section .right-content p {font-size: 26px; line-height: 36px; }
+	/*------ Amospower ------*/
+	.amospower-section {padding: 50px 0 50px; }
+	.amospower-section .left-content p {font-size: 28px; line-height: 40px; }
+	/*------ Market ------*/
+	.market-section .right-content p {font-size: 26px; line-height: 40px; }
+	/*------ Autonomous ------*/
+	.autonomous-section .heading-row h2 { font-size: 30px; line-height: 44px; }
+	.autonomous-section .slider-row .autonomous-points li { padding-bottom: 15px; }
+	/*------ The Plan ------*/
+	.theplan-section {padding: 50px 0 70px; }
+	.theplan-section .heading-row h2 { font-size: 36px; padding-bottom: 20px; margin-bottom: 30px; }
+	.theplan-section .innerrow .content-box h2 { font-size: 36px; line-height: 50px; }
+	.theplan-section .innerrow-two .content-box h2 { font-size: 36px; line-height: 50px; }
+	/*------ Team ------*/
+	.team-section .header-row { text-align: center; }
+	.team-section .team-row [class*="col-"] { padding: 20px 15px; border: 0 !important; text-align: center; }
+	.team-section {padding: 50px 0 60px; }
+	.team-section .header-row h2 { font-size: 36px; }
+	.team-section .header-row p { font-size: 26px; margin-bottom: 20px; }
+	.team-section .button-row { margin-top: 0px; }
+	/*------ Video Model ------*/
+	#videomodel .modal-body iframe { height: 320px; }
+	/*------ Thank You Page ------*/
+	#thank-section {padding: 50px 0; }
+	#thank-section .banner-content i.fa {font-size: 100px; }
+	#thank-section .banner-content h1 {font-size: 42px; }
+	#thank-section .banner-content p.sub {font-size: 22px; }
+}
+@media (max-width: 640px) {
+	#GetInTouch .modal-body { max-width: 100%; margin-top: 0px; }
+}
+@media (max-width: 480px) {
+	/*------ Banner ------*/
+	.banner-section .left-content .sign-up-form .form-control { height: 50px; }
+	.banner-section .left-content .sign-up-form .input-group-append button {padding: 10px 15px; }
+	.banner-section .left-content .sign-up-form .input-group-append .signupbtn {padding: 10px 15px; }
+	/*------ Solution ------*/
+	.solution-section .right-content h2 { font-size: 25px; }
+	/*------ Amospower ------*/
+	.amospower-section .left-content p br { display: none; }
+	/*------ Autonomous ------*/
+	.autonomous-section { padding: 50px 0;  }
+	.autonomous-section .heading-row h2 {font-size: 24px; line-height: 37px; }
+	.autonomous-section .slider-row .autonomous-points li { font-size: 23px; padding-left: 35px; padding-bottom: 10px; }
+	.autonomous-section .slider-row .autonomous-points li::after { height: 8px; width: 9px; top: 15px; }
+	.autonomous-section .slider-row { margin-top: 30px; }
+	.autonomous-section .slider-row .autonomous-box .owl-dots { bottom: 10px; left: 30px; }
+	/*------ The Plan ------*/
+	.theplan-section .innerrow .content-box p { font-size: 18px; line-height: 30px; }
+	.theplan-section .innerrow-two .content-box p { font-size: 18px; line-height: 30px; }
+	.theplan-section .innerrow .content-box h2 { font-size: 28px; }
+	.theplan-section .innerrow-two .content-box h2 { font-size: 28px; }
+	/*------ Team ------*/
+	.team-section .header-row h2 { line-height: 36px; }
+	.team-section .header-row p {font-size: 21px; margin-bottom: 10px; }
+	.team-section .team-row .membersix { display: none; }
+	.team-section .button-row {margin-top: 20px; }
+	.team-section .button-row button { font-size: 20px; height: 60px; }
+	/*------ Video Model ------*/
+	#GetInTouch .modal-body { padding: 45px 20px 30px; }
+}
+@media (max-width: 360px) {
+	/*------ Video Model ------*/
+	#videomodel .modal-body iframe { height: 200px; }
+}
+
